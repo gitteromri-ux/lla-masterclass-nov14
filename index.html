@@ -28,7 +28,12 @@ const ALL=[
 ["Julie · masterclass cards (56s)","4:5 feed · 1080×1350","Julie_60s_4x5_Nov14_12PM_ET.mp4"],
 ["Card Gold · Julie portrait (15s)","9:16 vertical · 1080×1920","CardGold_15s_9x16_Nov14_12PM_ET.mp4"],
 ["Card Blue · Julie portrait (15s)","9:16 vertical · 1080×1920","CardBlue_Julie_15s_9x16_Nov14_12PM_ET.mp4"],
-["Zoom Blue · Julie portrait (15s)","9:16 vertical · 1080×1920","ZoomBlue_Julie_15s_9x16_Nov14_12PM_ET.mp4"]];
+["Zoom Blue · Julie portrait (15s)","9:16 vertical · 1080×1920","ZoomBlue_Julie_15s_9x16_Nov14_12PM_ET.mp4"],
+["Zoom Blue v12 · Julie live on Zoom (15s)","9:16 vertical · 1080×1920","ZoomBlue_v12_15s_9x16_Nov14_12PM_ET.mp4"],
+["Ad26 Zoom Blue · live on Meta now (15s)","9:16 vertical · 1080×1920","Ad26_ZoomBlue_15s_9x16_Nov14.mp4"],
+["Ad26 Zoom Blue · live on Meta now (15s)","4:5 feed · 1080×1350","Ad26_ZoomBlue_15s_4x5_Nov14.mp4"],
+["Ad27 Event Zoom (15s)","9:16 vertical · 1080×1920","Ad27_EventZoom_15s_9x16_Nov14.mp4"],
+["Ad27 Event Zoom (15s)","4:5 feed · 1080×1350","Ad27_EventZoom_15s_4x5_Nov14.mp4"]];
 const V=ALL.filter(x=>READY.includes(x[2]));
 const g=document.getElementById('g');
 for(const [t,m,f] of V){g.insertAdjacentHTML('beforeend',`<div class="card"><h2>${t}</h2><div class="meta">${m}</div><video src="v/${f}" autoplay muted loop playsinline controls preload="metadata"></video><button class="snd" onclick="const v=this.previousElementSibling;document.querySelectorAll('video').forEach(x=>{if(x!==v)x.muted=true});v.muted=!v.muted;v.volume=1;v.play();this.textContent=v.muted?'🔊 Tap for sound':'🔇 Mute'">🔊 Tap for sound</button><a class="dl" href="v/${f}" download="${f}">Download</a></div>`)}
