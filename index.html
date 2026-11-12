@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Julie Masterclass, Saturday Nov 14, 12 PM ET: videos for social</title>
+<style>
+body{margin:0;background:#07152a;color:#eef3fa;font-family:Inter,system-ui,sans-serif}
+header{padding:28px 20px 8px;text-align:center}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:400;font-size:30px;margin:0 0 6px}
+header p{margin:0;color:#9fb3cc;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;padding:22px;max-width:1300px;margin:0 auto}
+.card{background:#0d2240;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.card h2{font-size:17px;margin:0}.card .meta{font-size:13px;color:#9fb3cc}
+video{width:100%;border-radius:10px;background:#000}
+a.dl{display:block;text-align:center;background:#e9c97f;color:#1b1b1b;text-decoration:none;font-weight:600;padding:14px;border-radius:999px;font-size:16px}
+</style></head><body>
+<header><h1>The Longevity Masterclass with Julie Gibson Clark</h1>
+<p>Saturday, November 14 · 12 PM ET · Ready to post. Tap a button to download.</p></header>
+<div class="grid" id="g"></div>
+<script src="ready.js"></script>
+<script>
+const ALL=[
+["Julie's film, full masterclass edit (2:20)","9:16 vertical · 1080×1920","Julie_Masterclass_Film_2m20_9x16_Nov14_12PM_ET.mp4"],
+["Zoom Blue · Learn to age 33% slower (15s)","9:16 vertical · 1080×1920","ZoomBlue_15s_9x16_Nov14_12PM_ET.mp4"],
+["Zoom Blue (15s)","4:5 feed · 1080×1350","ZoomBlue_15s_4x5_Nov14_12PM_ET.mp4"],
+["Card Blue · Julie on Zoom (15s)","9:16 vertical · 1080×1920","CardBlue_15s_9x16_Nov14_12PM_ET.mp4"],
+["Event Zoom (15s)","9:16 vertical · 1080×1920","EventZoom_15s_9x16_Nov14_12PM_ET.mp4"],
+["Event Zoom (15s)","4:5 feed · 1080×1350","EventZoom_15s_4x5_Nov14_12PM_ET.mp4"],
+["Julie · masterclass cards (56s)","9:16 vertical · 1080×1920","Julie_60s_9x16_Nov14_12PM_ET.mp4"],
+["Julie · masterclass cards (56s)","4:5 feed · 1080×1350","Julie_60s_4x5_Nov14_12PM_ET.mp4"]];
+const V=ALL.filter(x=>READY.includes(x[2]));
+const g=document.getElementById('g');
+for(const [t,m,f] of V){g.insertAdjacentHTML('beforeend',`<div class="card"><h2>${t}</h2><div class="meta">${m}</div><video src="v/${f}" autoplay muted loop playsinline controls preload="metadata"></video><a class="dl" href="v/${f}" download="${f}">Download</a></div>`)}
+</script></body></html>
